@@ -1,0 +1,170 @@
+body{
+    display: grid;
+    grid-template-areas: "head    head "
+                         "main    main";
+    background: url(../img/busqueda.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body>header{    
+    grid-area: head;
+    background-color: #2ecc71;
+    text-align: center;
+    color: white;
+    font-size: 2.5vh;
+    display: grid;
+    grid-template-areas: "menu   title   title    title";
+}
+
+body>header>a{
+    display: grid;
+    grid-area: title;
+    text-decoration: none;
+    color: white;    
+    font-family: 'Pacifico', cursive;
+}
+
+body>header>nav{
+    display: none;
+}
+
+body>header>span>a>img{
+    width: 12vh;
+    margin: 0 auto;
+}
+
+body>main{
+    grid-area: main;
+    height: 80vh;
+    display: grid;
+    grid-gap: 2em;
+    font-family: 'Lato', sans-serif;
+    font-size: 2vh;
+    grid-template-areas: 
+    ". a a ."
+    ". a a .";
+}
+.formulario{
+    background-color: white;    
+    grid-area: a;
+    align-self: center;
+    margin:0 auto;
+    padding: 5%;
+}
+
+form{
+    padding: 2vw;
+    display: grid;
+    grid-gap: 2vw;
+}
+
+form>input{
+    display: block;
+    width: 35vw;
+    height: 6vh;
+    margin: 0 auto;
+    border: 1px black solid;
+}
+
+form>a{
+    text-decoration: none;
+    margin-top: 2vh;
+}
+
+
+.btn{
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    transition: background-color .3s;
+    padding: 4%;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #27ae60;
+}
+
+
+@media (min-width: 1024px){
+body{
+    display: grid;
+    grid-template-areas: "head    head "
+                         "main    main";
+}
+
+body>header{
+    grid-area: head;
+    padding-left: 5%;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-areas: "title   title   nav";
+}
+
+body>header>span{
+    display: none;
+}
+body>header>a{
+
+    grid-area: title;
+    text-align: left;
+}
+
+body>header>nav{
+    grid-area: nav;
+    display: grid;
+}
+
+body>header>nav>ul>li{
+    display: inline-block;
+    margin: 4%;
+}
+body>header>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+
+body>main{
+    grid-area: main;
+    height: 700px;
+}
+.formulario{
+    padding: 0;
+    font-size: 1.5vw;
+}
+form{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+form>input{
+    width: 20vw;
+    margin: 1.5vw;
+}
+form>a{
+    margin: 0 auto;
+    margin-left: 2vw;
+}
+button>span{
+    display: none;
+}
+
+.btn{
+    background: url(../img/search.png) no-repeat center;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #2ecc71;
+}
+}

@@ -1,0 +1,301 @@
+body{
+    display: grid;
+    grid-template-areas: "head    head "
+                         "main    main"
+                         "main    main "
+                         "footer  footer";
+}
+
+body>header{    
+    grid-area: head;
+    background-color: #2ecc71;
+    text-align: center;
+    font-size: 2.5vh;
+    display: grid;
+    grid-template-areas: "menu   title   title    title";
+}
+
+body>header>a{
+    display: grid;
+    grid-area: title;
+    text-decoration: none;
+    color: white;    
+    font-family: 'Pacifico', cursive;
+}
+
+body>header>nav{
+    display: none;
+}
+
+body>header>span>a>img{
+    width: 12vh;
+    margin: 0 auto;
+}
+
+body>main{
+    background-color: #F4F4F4;
+    font-family: 'Lato', sans-serif;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3vh;
+    padding: 3vh 5vw;
+}
+
+body>main>a>img{
+    width: 100vh;
+}
+
+.filtrar{
+    display: none;
+}
+.buscar{
+    height: 20vh;
+
+    background-color: white;
+    display: grid;
+    padding: 3vh;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:   "buscador buscador" 
+                            "entrada salida" 
+                            "entrada salida"
+                            "buscar buscar"
+                            "footer footer";
+    transition: 0.3s linear all;
+    font-size: 1.5vh;
+}
+
+#buscador{
+    grid-area: buscador;    
+    height: 5vh;
+    
+}
+#date1{
+    grid-area: entrada;
+}
+#date1>input{
+    width: 80%;
+}
+#date2{
+    grid-area: salida;
+}
+#date2>input{
+    width: 87%;
+}
+
+.buscar>footer{
+    position: absolute;
+    right: 5vw;
+    bottom: 58.4vh;
+}
+
+.btn{
+    grid-area: buscar;
+    width: 100%;
+    height: 5vh;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #27ae60;
+}
+
+body>main>article{    
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    text-align: justify;
+    transition: 0.3s linear all;
+}
+body>main>article:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.5s;
+}
+
+.precio{
+    position: absolute;
+    top: 20px;
+    font-size: 2.5vh;
+}
+.container{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-size: 2vw;
+}
+.container>a>input{
+    background-color: #2ecc71;
+    font-size: 2vh;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    transition: background-color .3s;
+}
+.container>a{
+    text-decoration: none;
+}
+.content {
+    padding: 5%;    
+    padding-top: 0; 
+    font-size: 2.5vw;
+}
+
+main>article>div>header>h2>a {
+    color: #0C2031;
+    text-decoration: none
+}
+
+main>article>div>img {
+    height: 100%;
+    width: 100%;
+}
+
+body>main>article>footer{
+    position: relative;
+}
+body>footer{
+    grid-area: footer;
+    background-color: #142534;
+    color: white;
+    text-align: center;
+    padding: 25px; 
+}
+body>footer>ul{
+    padding: 0px;
+}
+
+body>footer>ul>li{
+    text-align:center;
+    display:inline-block;
+    margin: 10px 25px;
+    width: 5%;
+}
+body>footer>ul>li>a{
+    color: white;
+}
+body>footer>ul>li>a>img{
+    background-color: white;
+    border-radius: 50%;
+    border: solid;
+    border-width: thin;
+    transition: 0.4s linear all;
+    width: 60px;
+}
+body>footer>ul>li>a>img:hover{
+    background-color: #EE9A12;  
+    transition: 0.4s linear all;
+}
+
+
+@media (min-width: 1024px){
+
+body>header{    
+    padding-left: 5%;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-areas: "title   title   title    nav";
+}
+
+body>header>span{
+    display: none;
+}
+body>header>a{
+    text-align: left;
+    width: 40%;
+}
+
+body>header>nav{
+    grid-area: nav;
+    display: grid;
+}
+
+body>header>nav>ul>li{
+    display: inline-block;
+    margin: 4%;
+}
+body>header>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+
+body>main{
+    display: grid;
+    grid-template-columns: 28% 72%;
+    grid-template-areas: "buscar  article"
+                         "filtrar  article"
+                         "filtrar  article"                         
+                         "filtrar  article";
+}
+.buscar{
+    grid-area: buscar;
+    padding: 3vh;
+    height: 30vh;
+    background-color: white;
+    display: grid;
+
+    grid-template-columns: 48% 1% 48%;
+    grid-template-areas:   " buscador buscador buscador" 
+                            "entrada . salida"
+                            "buscar buscar buscar";
+    transition: 0.3s linear all;
+}
+
+.filtrar{
+    grid-area: filtrar;
+    display: grid;
+    padding: 3vh;
+    height: 60%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "tittle tittle" 
+                         "min max"
+                         "mapa mapa";
+}
+.filtrar>h3{
+    grid-area: tittle;
+}
+.filtrar>#min{
+    grid-area: min;
+}
+#min>input{
+    width: 90%;
+}
+.filtrar>#max{
+    grid-area: max;
+}
+#max>input{
+    width: 90%;
+}
+.filtrar>footer{
+    grid-area: mapa;  
+    position: relative;
+}
+.filtrar>footer>iframe{  
+    display: block; width: 100%; height: 80%; border: none;
+}
+
+.content{
+    font-size: 2vh;
+}
+#date1>input{
+    width: 87%;
+}
+
+#date2{
+    grid-area: salida;
+}
+#date2>input{
+    width: 95%;
+}
+
+}
